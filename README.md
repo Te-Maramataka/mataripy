@@ -25,6 +25,27 @@ To predict the moon phase, you may use the following setting:
 
 When the PsAng increases to 360° (which = 0°), it is a new moon. When it decreases back to 0°, it is a full moon.
 For S-T-O, it rises to its a local maximum at new moon, and falls to a local minimum at full moon.
+```
+*******************************************************************************
+ Date__(UT)__HR:MN        S-T-O    PsAng   PsAMV
+************************************************
+ 2022-May-30 11:40     178.4879  353.821  81.193
+ 2022-May-30 11:50     178.4749  356.712  81.228
+ 2022-May-30 12:00     178.4583  359.548  81.262
+ 2022-May-30 12:10     178.4380    2.317  81.297
+ 2022-May-30 12:20     178.4142    5.010  81.332
+ 2022-May-30 12:30     178.3872    7.619  81.367
+ 2022-May-30 12:40     178.3570   10.138  81.402
+ 2022-May-30 12:50     178.3238   12.563  81.436
+...
+ 2022-Jun-14 11:40       2.6868    5.815 273.248
+ 2022-Jun-14 11:50       2.6925    3.661 273.197
+ 2022-Jun-14 12:00       2.7019    1.519 273.146
+ 2022-Jun-14 12:10       2.7148  359.392 273.095
+ 2022-Jun-14 12:20       2.7313  357.288 273.044
+ 2022-Jun-14 12:30       2.7512  355.210 272.993
+```
+In the example above a new moon occurs between 2022-May-30 12:00 and 2022-May-30 12:10 UTC, and a full moon between 2022-Jun-14 12:00 and 2022-Jun-14 12:10
 #### JPL Horizons API Wrappers
 * [Python wrapper](https://astroquery.readthedocs.io/en/latest/jplhorizons/jplhorizons.html) - I've written [a python programme](https://github.com/kumkee/solarterms) to predict the 24 Chinese Solar Terms. You may use that as an example.
 * [JavaScript wrapper](https://github.com/zachfejes/js-horizons) - I haven't tested this.
