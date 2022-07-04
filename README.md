@@ -25,10 +25,20 @@ To predict the moon phase, you may use the following setting:
 
 When the PsAng increases to 360° (which = 0°), it is a new moon. When it decreases back to 0°, it is a full moon.
 For S-T-O, it rises to its a local maximum at new moon, and falls to a local minimum at full moon.
+A new moon happens when the S-T-O climbs to a local maximum (should be just below 180°), and full moon when it declines to a local minimum (just above 0°).
+
+Another less accurate method is to look at the PsAng. The PsAng increases to 360° (which = 0°) near a new moon, while decreases to 0° near a full moon. Though the error is usually small, it can be the different between two days in NZST. See the example below.
 ```
 *******************************************************************************
  Date__(UT)__HR:MN        S-T-O    PsAng   PsAMV
 ************************************************
+ 2022-May-30 10:30     178.4699  333.229  80.952
+ 2022-May-30 10:40     178.4841  336.104  80.986
+ 2022-May-30 10:50     178.4945  339.026  81.021
+ 2022-May-30 11:00     178.5011  341.981  81.055
+ 2022-May-30 11:10     178.5037  344.953  81.089  <-- ~ local maximum = new moon
+ 2022-May-30 11:20     178.5023  347.927  81.124
+ 2022-May-30 11:30     178.4971  350.888  81.159
  2022-May-30 11:40     178.4879  353.821  81.193
  2022-May-30 11:50     178.4749  356.712  81.228
  2022-May-30 12:00     178.4583  359.548  81.262
@@ -38,6 +48,14 @@ For S-T-O, it rises to its a local maximum at new moon, and falls to a local min
  2022-May-30 12:40     178.3570   10.138  81.402
  2022-May-30 12:50     178.3238   12.563  81.436
 ...
+ 2022-Jun-14 10:20       2.7703   22.771 273.652
+ 2022-Jun-14 10:30       2.7476   20.727 273.601
+ 2022-Jun-14 10:40       2.7283   18.652 273.551
+ 2022-Jun-14 10:50       2.7124   16.551 273.501
+ 2022-Jun-14 11:00       2.7001   14.426 273.450
+ 2022-Jun-14 11:10       2.6913   12.285 273.399
+ 2022-Jun-14 11:20       2.6861   10.133 273.349
+ 2022-Jun-14 11:30       2.6846    7.974 273.298  <-- ~ local maximum = full moon
  2022-Jun-14 11:40       2.6868    5.815 273.248
  2022-Jun-14 11:50       2.6925    3.661 273.197
  2022-Jun-14 12:00       2.7019    1.519 273.146
@@ -45,7 +63,7 @@ For S-T-O, it rises to its a local maximum at new moon, and falls to a local min
  2022-Jun-14 12:20       2.7313  357.288 273.044
  2022-Jun-14 12:30       2.7512  355.210 272.993
 ```
-In the example above a new moon occurs between 2022-May-30 12:00 and 2022-May-30 12:10 UTC, and a full moon between 2022-Jun-14 12:00 and 2022-Jun-14 12:10
+In the example above, a new moon occurs at around 2022-May-30 11:10 UTC, but PsAng predicts it to be after 2022-May-30 12:00 UTC, which is a new day in NZST. 
 #### JPL Horizons API Wrappers
 * [Python wrapper](https://astroquery.readthedocs.io/en/latest/jplhorizons/jplhorizons.html) - I've written [a python programme](https://github.com/kumkee/solarterms) to predict the 24 Chinese Solar Terms. You may use that as an example.
 * [JavaScript wrapper](https://github.com/zachfejes/js-horizons) - I haven't tested this.
