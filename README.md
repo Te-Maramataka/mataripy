@@ -36,7 +36,7 @@ Another less accurate method is to look at the PsAng. The PsAng increases to 360
  2022-May-30 10:40     178.4841  336.104  80.986
  2022-May-30 10:50     178.4945  339.026  81.021
  2022-May-30 11:00     178.5011  341.981  81.055
- 2022-May-30 11:10     178.5037  344.953  81.089  <-- ~ local maximum = new moon
+ 2022-May-30 11:10     178.5037  344.953  81.089  <-- ~ local maximum of S-T-O = new moon
  2022-May-30 11:20     178.5023  347.927  81.124
  2022-May-30 11:30     178.4971  350.888  81.159
  2022-May-30 11:40     178.4879  353.821  81.193
@@ -55,7 +55,7 @@ Another less accurate method is to look at the PsAng. The PsAng increases to 360
  2022-Jun-14 11:00       2.7001   14.426 273.450
  2022-Jun-14 11:10       2.6913   12.285 273.399
  2022-Jun-14 11:20       2.6861   10.133 273.349
- 2022-Jun-14 11:30       2.6846    7.974 273.298  <-- ~ local maximum = full moon
+ 2022-Jun-14 11:30       2.6846    7.974 273.298  <-- ~ local maximum of S-T-O = full moon
  2022-Jun-14 11:40       2.6868    5.815 273.248
  2022-Jun-14 11:50       2.6925    3.661 273.197
  2022-Jun-14 12:00       2.7019    1.519 273.146
