@@ -21,7 +21,7 @@ To predict the moon phase, you may use the following setting:
 * Ephemeris Type: Observer Table
 * Target body: **Moon**
 * Observer Location: **Geocentric**
-* Table Settings: **Sun-Target-Observer ~PHASE angle** (S-T-O) and/or **Sun-Target radial & -vel pos. angle** (PsAng)
+* Table Settings: **Sun-Target-Observer ~PHASE angle** (S-T-O) and/or **Sun-Target radial & -vel pos. angle** (PsAng) (PsAMV)
 
 When the PsAng increases to 360° (which = 0°), it is a new moon. When it decreases back to 0°, it is a full moon.
 For S-T-O, it rises to its a local maximum at new moon, and falls to a local minimum at full moon.
