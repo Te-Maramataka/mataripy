@@ -63,7 +63,7 @@ Another less accurate method is to look at the PsAng. The PsAng increases to 360
  2022-Jun-14 12:20       2.7313  357.288 273.044
  2022-Jun-14 12:30       2.7512  355.210 272.993
 ```
-In the example above, a new moon occurs at around 2022-May-30 11:10 UTC, but PsAng predicts it to be after 2022-May-30 12:00 UTC, which is a new day, 1 July, in NZST. 
+In the example above, a new moon occurs at around 2022-May-30 11:10 UTC, but PsAng predicts it to be after 2022-May-30 12:00 UTC, which is a new day, 1 July, in NZST. You may use PsAng to find the rough location of a new moon, and then use S-T-O to get the accurate time.
 #### JPL Horizons API Wrappers
 * [Python wrapper](https://astroquery.readthedocs.io/en/latest/jplhorizons/jplhorizons.html) - I've written [a python programme](https://github.com/kumkee/solarterms) to predict the 24 Chinese Solar Terms. You may use that as an example.
 * [JavaScript wrapper](https://github.com/zachfejes/js-horizons) - I haven't tested this.
