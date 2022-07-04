@@ -16,3 +16,12 @@ The Matariki holiday is a Friday during or after the first Tangaroa Luna period 
 ## How to Find Out Moon Phase
 ### Recommended Way - JPL Horizons
 The most accurate way to calculate the moon phase is through [Horizon System](https://ssd.jpl.nasa.gov/horizons/) from NASA's Jet Propulsion Laboratory. For a quick check, you can use their [web app](https://ssd.jpl.nasa.gov/horizons/app.html). However, to do arbitary prediction, you will need to use their [API](https://ssd-api.jpl.nasa.gov/doc/horizons.html) or a third party API wrapper for your language. More on that later.
+#### Moon Phase from JPL Horizons
+To predict the moon phase, you may use the following setting:
+* Ephemeris Type: Observer Table
+* Target body: **Moon**
+* Observer Location: **Geocentric**
+* Table Settings: **Sun-Target radial & -vel pos. angle** (PsAng) and/or **Sun-Target-Observer ~PHASE angle** (S-T-O)
+
+When the PsAng increases to 360° (which = 0°), it is a new moon. When it decreases back to 0°, it is a full moon.
+For S-T-O, it rises to its a local maximum at new moon, and falls to a local minimum at full moon.
