@@ -25,3 +25,5 @@ To predict the moon phase, you may use the following setting:
 
 When the PsAng increases to 360° (which = 0°), it is a new moon. When it decreases back to 0°, it is a full moon.
 For S-T-O, it rises to its a local maximum at new moon, and falls to a local minimum at full moon.
+#### JPL Horizons API Wrappers
+* [Python](https://astroquery.readthedocs.io/en/latest/jplhorizons/jplhorizons.html). I've written [a python programme](https://github.com/kumkee/solarterms) to predict to 24 Chinese Solar Terms. You may use that as an example.
