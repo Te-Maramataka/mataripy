@@ -62,5 +62,6 @@ In the example above, a new moon occurs at around 2022-May-30 11:11 UTC, and a f
 * [Direct API call](https://ssd-api.jpl.nasa.gov/doc/horizons.html) - as an alternative, you can directly call their API
 
 ## Getting Apperant Distant between the Sun and Matariki - Bonus point
-Instead of using the rule of thumb of 19 June to predict the rise of Matariki, you may use the difference in [Right Ascension](https://en.wikipedia.org/wiki/Right_ascension) between the Sun and Matariki. This can be done again using JPL Horizons.
+Instead of using the rule of thumb of 19 June to predict the rise of Matariki, you can calculate the locations of the sun and Matariki cluster and see when the cluster is visible at dawn. 
+To do this you will need to find out [horizontal coordinates](https://en.wikipedia.org/wiki/Horizontal_coordinate_system) (AZ/EL) for both objects. The AZ/EL for the sun can be retrieved from JPL Horizons. For the Matariki cluster, you will need to convert its [equatorial coordinate](https://en.wikipedia.org/wiki/Equatorial_coordinate_system) (RA/DEC) to its AZ/EL. This [conversion can be done](https://gist.github.com/dokeeffe/18857db66dbabc14679c20a8560e2cd6) for example using Astropy in python.
 
