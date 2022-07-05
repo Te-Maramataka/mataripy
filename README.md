@@ -22,9 +22,6 @@ To predict the moon phase, you may use the following setting:
 * Target body: **Moon**
 * Observer Location: **Geocentric**
 * Table Settings: **Sun-Target-Observer ~PHASE angle** (S-T-O)
-
-When the PsAng increases to 360° (which = 0°), it is a new moon. When it decreases back to 0°, it is a full moon.
-For S-T-O, it rises to its a local maximum at new moon, and falls to a local minimum at full moon.
 A new moon happens when the S-T-O climbs to a local maximum (should be just below 180°), and full moon when it declines to a local minimum (just above 0°).
 ```
 *******************************************************************************
