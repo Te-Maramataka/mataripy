@@ -18,7 +18,11 @@ To predict the moon phase, you may use the following setting:
 * Ephemeris Type: Observer Table
 * Target body: **Moon**
 * Observer Location: **Geocentric**
-* Table Settings: **Sun-Target-Observer ~PHASE angle** (S-T-O)
+* Table Settings: **Sun-Target-Observer ~PHASE angle** (S-T-O) 
+
+There is a [Wikipedia page about the S-T-O phase angle](https://en.wikipedia.org/wiki/Phase_angle_%28astronomy%29). 
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Phase_Angle_3.svg/1280px-Phase_Angle_3.svg.png" alt="S-T-O" width="300"/>
 
 A new moon happens when the S-T-O climbs to a local maximum (should be just below 180°), and full moon when it declines to a local minimum (just above 0°).
 ```
