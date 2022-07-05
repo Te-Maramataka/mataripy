@@ -3,6 +3,8 @@
 It is always a Friday. How to determin the day of the week depends on the language you use. In Javascript, for example, is the [`getDate()` function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getDay) of the `Date` class. 
 ## Moon Phase
 It is a Tangaroa night. There are normally 4 Tangaroa nights in a Māori lunar month, Tangaroa-ā-mua, Tangaroa-ā-roto, Tangaroa whakapau, and Tangaroa whāriki kiokio. In a 30-night month, these are the 23th to 26th nights. However, Tangaroa are the 23th to 25th nights in a 29-night months. As in Traditional Chinese Calendar, a Māori month starts at new moon.
+
+The Tangaroa nights won't always include a Friday. In that case, a Friday after the first Tangaroa period will be used.
 ## NZST 
 We will use midnight in New Zealand Standard Time (UTC+12) to determine the date where the new moon falls. For those trying to use the Traditional Chinese Calendar (TCC), please be mineful that TCC is based on the Chinese Standard Time (UTC+8).
 ## Apparent position of Matariki cluster to the Sun
@@ -61,7 +63,7 @@ In the example above, a new moon occurs at around 2022-May-30 11:11 UTC, and a f
 * Other languages - you will need to find the wrapper for your langauge, if is other than Python or JavaScript. 
 * [Direct API call](https://ssd-api.jpl.nasa.gov/doc/horizons.html) - as an alternative, you can directly call their API
 
-## Getting Apperant Distant between the Sun and Matariki - Bonus point
+## Getting Apperant Distance between the Sun and Matariki - Bonus point
 Instead of using the rule of thumb of 19 June to predict the rise of Matariki, you can calculate the locations of the sun and Matariki cluster and see when the cluster is visible at dawn. 
 To do this you will need to find out [horizontal coordinates](https://en.wikipedia.org/wiki/Horizontal_coordinate_system) (AZ/EL) for both objects. The AZ/EL for the sun can be retrieved from JPL Horizons. For the Matariki cluster, you will need to convert its [equatorial coordinate](https://en.wikipedia.org/wiki/Equatorial_coordinate_system) (RA/DEC) (which can be safely assumed to be constants) to its AZ/EL. This [conversion can be done](https://gist.github.com/dokeeffe/18857db66dbabc14679c20a8560e2cd6) for example using Astropy in python.
 
