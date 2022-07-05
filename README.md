@@ -60,3 +60,7 @@ In the example above, a new moon occurs at around 2022-May-30 11:11 UTC, and a f
 * [JavaScript wrapper](https://github.com/zachfejes/js-horizons) - I haven't tested this.
 * Other languages - you will need to find the wrapper for your langauge, if is other than Python or JavaScript. 
 * [Direct API call](https://ssd-api.jpl.nasa.gov/doc/horizons.html) - as an alternative, you can directly call their API
+
+## Getting Apperant Distant between the Sun and Matariki - Bonus point
+Instead of using the rule of thumb of 19 June to predict the rise of Matariki, you may use the difference in [Right Ascension](https://en.wikipedia.org/wiki/Right_ascension) between the Sun and Matariki. This can be done again using JPL Horizons.
+
