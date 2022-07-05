@@ -22,6 +22,7 @@ To predict the moon phase, you may use the following setting:
 * Target body: **Moon**
 * Observer Location: **Geocentric**
 * Table Settings: **Sun-Target-Observer ~PHASE angle** (S-T-O)
+
 A new moon happens when the S-T-O climbs to a local maximum (should be just below 180°), and full moon when it declines to a local minimum (just above 0°).
 ```
 *******************************************************************************
