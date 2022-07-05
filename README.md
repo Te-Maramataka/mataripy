@@ -4,7 +4,7 @@ It is always a Friday. How to determin the day of the week depends on the langua
 ## Moon Phase
 It is a Tangaroa night. There are normally 4 Tangaroa nights in a Māori lunar month, Tangaroa-ā-mua, Tangaroa-ā-roto, Tangaroa whakapau, and Tangaroa whāriki kiokio. In a 30-night month, these are the 23th to 26th nights. However, Tangaroa are the 23th to 25th nights in a 29-night months. As in Traditional Chinese Calendar, a Māori month starts at new moon.
 
-The Tangaroa nights won't always include a Friday. In that case, a Friday after the first Tangaroa period will be used.
+The Tangaroa nights won't always include a Friday. In that case, a Friday after the Tangaroa period will be used.
 ## NZST 
 We will use midnight in New Zealand Standard Time (UTC+12) to determine the date where the new moon falls. For those trying to use the Traditional Chinese Calendar (TCC), please be mineful that TCC is based on the Chinese Standard Time (UTC+8).
 ## Apparent position of Matariki cluster to the Sun
