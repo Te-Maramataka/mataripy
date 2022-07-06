@@ -29,7 +29,7 @@ There is a [Wikipedia page about the S-T-O phase angle](https://en.wikipedia.org
 A new moon happens when the S-T-O climbs to a local maximum (should be just below 180°), and full moon when it declines to a local minimum (just above 0°).
 ```
 *******************************************************************************
- Date__(UT)__HR:MN        S-T-O    PsAng   PsAMV
+ Date__(UT)__HR:MN        S-T-O    
 ************************************************
  2022-May-30 11:06     178.5031
  2022-May-30 11:07     178.5033
