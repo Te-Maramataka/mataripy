@@ -14,7 +14,7 @@ If you want to be more precise, it is on and after two days before the June sols
 The Matariki holiday is a Friday during or after the first Tangaroa Luna period after 19 June.
 # How to Find the Moon Phase
 ## JPL Horizons
-The most accurate way to calculate the moon phase is through [Horizons System](https://ssd.jpl.nasa.gov/horizons/) from NASA's Jet Propulsion Laboratory. For a quick check, you can use their [web app](https://ssd.jpl.nasa.gov/horizons/app.html). However, to do arbitary predictions, you will need to use their [API](https://ssd-api.jpl.nasa.gov/doc/horizons.html) or a third party API wrapper for your language. More on that later.
+The most accurate way to calculate the moon phase is through [Horizons System](https://ssd.jpl.nasa.gov/horizons/) from NASA's Jet Propulsion Laboratory. For a quick check, you can use their [web app](https://ssd.jpl.nasa.gov/horizons/app.html). However, to do arbitary predictions, you will need to use [their API](https://ssd-api.jpl.nasa.gov/doc/horizons.html) or a third party API wrapper for your language. More on that later.
 ## Moon Phase from JPL Horizons
 To predict the moon phase, you may use the following setting:
 * Ephemeris Type: Observer Table
@@ -28,7 +28,7 @@ There is a [Wikipedia page about the S-T-O phase angle](https://en.wikipedia.org
 
 A new moon happens when the S-T-O climbs to a local maximum (should be just below 180°), and full moon when it declines to a local minimum (just above 0°).
 ```
-*******************************************************************************
+************************************************
  Date__(UT)__HR:MN        S-T-O    
 ************************************************
  2022-May-30 11:06     178.5031
@@ -58,7 +58,7 @@ A new moon happens when the S-T-O climbs to a local maximum (should be just belo
 ```
 In the example above, a new moon occurs at around 2022-May-30 11:11 UTC, and a full moon at around 2022-Jun-14 11:29.
 ## JPL Horizons API Wrappers
-* [Python wrapper](https://astroquery.readthedocs.io/en/latest/jplhorizons/jplhorizons.html) - I've written [a python programme](https://github.com/kumkee/solarterms) to predict the 24 Chinese Solar Terms. You may use that as an example.
+* [Python wrapper](https://astroquery.readthedocs.io/en/latest/jplhorizons/jplhorizons.html) - Using this wrapper, I've written [a python programme](https://github.com/kumkee/solarterms) to predict the 24 Chinese Solar Terms. You may use that as an example.
 * [JavaScript wrapper](https://github.com/zachfejes/js-horizons) - I haven't tested this.
 * Other languages - you will need to find the wrapper for your langauge, if is other than Python or JavaScript. 
 * [Direct API call](https://ssd-api.jpl.nasa.gov/doc/horizons.html) - as an alternative, you can directly call their API
