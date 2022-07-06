@@ -60,8 +60,11 @@ In the example above, a new moon occurs at around 2022-May-30 11:11 UTC, and a f
 ## JPL Horizons API Wrappers
 * [Python wrapper](https://astroquery.readthedocs.io/en/latest/jplhorizons/jplhorizons.html) - Using this wrapper, I've written [a python programme](https://github.com/kumkee/solarterms) to predict the 24 Chinese Solar Terms. You may use that as an example.
 * [JavaScript wrapper](https://github.com/zachfejes/js-horizons) - I haven't tested this.
-* Other languages - you will need to find the wrapper for your langauge, if is other than Python or JavaScript. 
+* Other languages - you will need to find the wrapper for your langauge, if it is other than Python or JavaScript. 
 * [Direct API call](https://ssd-api.jpl.nasa.gov/doc/horizons.html) - as an alternative, you can directly call their API
+
+## Other Ways of Calculating Moon Phase
+If you are using other method, you may want to compare your results with the one from JPL Horizons.
 
 ### Bonus Point - determining when Matariki can be visible by its coordinates
 Instead of using the rule of thumb of 19 June to predict the rise of Matariki, you can calculate the locations of the sun and Matariki cluster and see when the cluster is visible at dawn. 
