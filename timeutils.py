@@ -8,5 +8,5 @@ TIMEZONE = "Pacific/Auckland"
 def arrow2str(t):
     return t.to('UTC').format(JPLFORMAT)
 
-def str2arrow(s):
-    return arrow.get(s, JPLFORMAT).to(TIMEZONE)
+def str2arrow(s, timezone=TIMEZONE):
+    return arrow.get(s, JPLFORMAT).to(timezone)

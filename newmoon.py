@@ -25,17 +25,15 @@ def findNewMoon(date, scale='hour'):
         delta = delta*24*30
     return __findNewMoon(date.shift(minutes=-delta), date.shift(minutes=delta), step=step)
 
-v = [arrow.get(datetime(2022,6,26), TIMEZONE)]
 
-for s in ['day', 'hour', 'minute']:
-    v = list(map(lambda x: findNewMoon(x, s), v))
-    v = list(itertools.chain(*v))
-# v = findNewMoonRefine(v, 'day')
-# v = findNewMoonRefine(v.shift(days=-30), v.shift(days=30), '1d')
-#for s in ['hour', 'minute']:
-#    v = list(map(lambda x: findNewMoonRefine(x, s), v))
+def findNewMoonAround(t):
+    v = [t]
+    for s in ['day', 'hour', 'minute']:
+        v = list(map(lambda x: findNewMoon(x, s), v))
+        v = list(itertools.chain(*v))
+    return v
 
-#for s in ['day', 'hour', 'minute']:
-#    v = list(map(lambda x: findNewMoonRefine(x, s), v))
 
-# v = list(map(lambda x: findNewMoonRefine(x, 'day'), v))
+if __name__=='__main__':
+    t = arrow.get(datetime(2022,6,26), TIMEZONE)
+    print(findNewMoonAround(t))
