@@ -13,7 +13,7 @@ def __findNewMoon(start, stop, step):
     return l # if step=='1d' else l[0]
     # return find_peaks(v['alpha'])[0]
 
-def findNewMoon(date, scale='hour'):
+def getNewMoon(date, scale='hour'):
     delta = 60
     if scale == 'minute':
         step = '1m'
@@ -26,14 +26,14 @@ def findNewMoon(date, scale='hour'):
     return __findNewMoon(date.shift(minutes=-delta), date.shift(minutes=delta), step=step)
 
 
-def findNewMoonAround(t):
+def getNewMoonAround(t):
     v = [t]
     for s in ['day', 'hour', 'minute']:
-        v = list(map(lambda x: findNewMoon(x, s), v))
+        v = list(map(lambda x: getNewMoon(x, s), v))
         v = list(itertools.chain(*v))
     return v
 
 
 if __name__=='__main__':
     t = arrow.get(datetime(2022,6,26), TIMEZONE)
-    print(findNewMoonAround(t))
+    print(getNewMoonAround(t))
