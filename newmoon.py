@@ -10,8 +10,8 @@ def __findNewMoon(start, stop, step):
     v = h.ephemerides(quantities='24')
     idx = find_peaks(v['alpha'])[0]
     l = list(map(str2arrow, v['datetime_str'][idx]))
-    return l # if step=='1d' else l[0]
-    # return find_peaks(v['alpha'])[0]
+    return l
+
 
 def getNewMoon(date, scale='hour'):
     delta = 60
