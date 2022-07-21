@@ -16,12 +16,21 @@ def getMatarikiTangaroa(year, newMoons = None):
     if not newMoons:
         newMoons = getNewMoonAroundMatariki(year)
     t = newMoons[0].shift(days=22)
-    if t.datetime.day <19:
-        t.shift(days=1)
+    if t.datetime.day < 19:
+        t = t.shift(days=1)
     return t
+
+def getMatarikiFriday(year):
+    t = getMatarikiTangaroa(year)
+    m = t.shift(days = 4 - t.weekday())
+    if m.datetime.day < 19 and m.datetime.month <= 6:
+        m = m.shift(days=7)
+    return m
 
 if __name__=='__main__':
     for y in range(2022,2053):
         new_moons = getNewMoonAroundMatariki(y)
         t = getMatarikiTangaroa(y, new_moons)
-        print("Tangaroa: {},\t{:>9s},\tLunar Month Length: {}".format(t, t.strftime('%A'), getLunarMonthLength(new_moons)))
+        m = getMatarikiFriday(y)
+        print("Tangaroa: {}, {:>9s}, matariki: {}, Lm: {}".format(t, t.strftime('%A'), m, getLunarMonthLength(new_moons)))
+        # print("Matariki Holiday: {}".format(m))
