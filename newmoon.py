@@ -4,7 +4,7 @@ from timeutils import *
 import itertools
 
 
-def __findNewMoon(start, stop, step):
+def findNewMoon(start, stop, step):
     h = Horizons(id='301', location='geocentric', \
                  epochs={'start': arrow2str(start), 'stop': arrow2str(stop), 'step': step})
     v = h.ephemerides(quantities='24')
@@ -23,12 +23,15 @@ def getNewMoon(date, scale='hour'):
     else:
         step = '1d'
         delta = delta*24*30
-    return __findNewMoon(date.shift(minutes=-delta), date.shift(minutes=delta), step=step)
+    return findNewMoon(date.shift(minutes=-delta), date.shift(minutes=delta), step=step)
 
 
-def getNewMoonAround(t):
+def getNewMoonAround(t, startScale='day'):
     v = [t]
-    for s in ['day', 'hour', 'minute']:
+    scales = ['day', 'hour', 'minute']
+    if startScale in scales[1:]:
+        scales = scales[scales.index(startScale):]
+    for s in scales:
         v = list(map(lambda x: getNewMoon(x, s), v))
         v = list(itertools.chain(*v))
     return v
