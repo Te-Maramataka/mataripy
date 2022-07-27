@@ -28,7 +28,8 @@ def getMatarikiFriday(year, observer='geocentric'):
     return m
 
 if __name__=='__main__':
-    obs = '467'# 'geocentric'
+    # obs = '467' # 'Auckland Observatrory'
+    obs = '500' # 'geocentric'
     for y in range(2022,2053):
         new_moons = getNewMoonAroundMatariki(y, observer=obs)
         t = getMatarikiTangaroa(y, new_moons, observer=obs)
