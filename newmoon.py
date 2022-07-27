@@ -4,8 +4,8 @@ from timeutils import *
 import itertools
 
 
-def findNewMoon(start, stop, step):
-    h = Horizons(id='301', location='geocentric', \
+def findNewMoon(start, stop, step, observer='geocentric'):
+    h = Horizons(id='301', location=observer, \
                  epochs={'start': arrow2str(start), 'stop': arrow2str(stop), 'step': step})
     v = h.ephemerides(quantities='24')
     idx = find_peaks(v['alpha'])[0]
@@ -13,7 +13,7 @@ def findNewMoon(start, stop, step):
     return l
 
 
-def getNewMoon(date, scale='hour'):
+def getNewMoon(date, scale='hour', observer='geocentric'):
     delta = 60
     if scale == 'minute':
         step = '1m'
@@ -23,16 +23,16 @@ def getNewMoon(date, scale='hour'):
     else:
         step = '1d'
         delta = delta*24*30
-    return findNewMoon(date.shift(minutes=-delta), date.shift(minutes=delta), step=step)
+    return findNewMoon(date.shift(minutes=-delta), date.shift(minutes=delta), step=step, observer=observer)
 
 
-def getNewMoonAround(t, startScale='day'):
+def getNewMoonAround(t, startScale='day', observer='geocentric'):
     v = [t]
     scales = ['day', 'hour', 'minute']
     if startScale in scales[1:]:
         scales = scales[scales.index(startScale):]
     for s in scales:
-        v = list(map(lambda x: getNewMoon(x, s), v))
+        v = list(map(lambda x: getNewMoon(x, s, observer), v))
         v = list(itertools.chain(*v))
     return v
 
