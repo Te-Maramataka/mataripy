@@ -1,2 +1,2 @@
 # mataripy
-Python Alogorithm to predict Matariki holiday and Māori New Year in general.
+This is just a dummy repository to host the group discussions. A demo code will be uploaded later here.
