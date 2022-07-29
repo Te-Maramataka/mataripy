@@ -21,4 +21,4 @@ def displayMatarikiHolidays(years, observers=['500'], displayMonthLength=False):
         print(divider)
 
 if __name__=='__main__':
-    displayMatarikiHolidays([2577, 2578, 2799, 2579, 2951], displayMonthLength=True)
+    displayMatarikiHolidays([2799, 2579, 2951], displayMonthLength=True)

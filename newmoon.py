@@ -22,7 +22,7 @@ def getNewMoon(date, scale='hour', observer='geocentric'):
         delta = delta*24
     else:
         step = '1d'
-        delta = delta*24*30
+        delta = delta*24*30.5
     return findNewMoon(date.shift(minutes=-delta), date.shift(minutes=delta), step=step, observer=observer)
 
 
@@ -38,5 +38,5 @@ def getNewMoonAround(t, startScale='day', observer='geocentric'):
 
 
 if __name__=='__main__':
-    t = arrow.get(datetime(2022,6,26), TIMEZONE)
+    t = arrow.get(datetime(2951,6,26), TIMEZONE)
     print(getNewMoonAround(t))
