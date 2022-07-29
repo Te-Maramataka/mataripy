@@ -9,7 +9,7 @@ def displayMatarikiHolidays(years, observers=['500']):
         for y in years:
             new_moons = getNewMoonAroundMatariki(y, observer=obs)
             t = getMatarikiTangaroa(y, new_moons, observer=obs)
-            m = getMatarikiFriday(y, observer=obs)
+            m = getMatarikiFriday(y, newMoons=new_moons, tangaroa=t, observer=obs)
             print("Tangaroa: {}, {}, matariki: {}"
               .format(t.strftime('%Y %d %b'), t.strftime('%a'), m.strftime('%d %b')))
 

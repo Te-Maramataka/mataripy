@@ -12,7 +12,7 @@ def getLunarMonthLength(newMoons):
     time_delta = functools.reduce(operator.sub, map(lambda x: x.floor('day'), newMoons[:2]))
     return -time_delta.days
 
-def getMatarikiTangaroa(year, newMoons = None, observer='geocentric'):
+def getMatarikiTangaroa(year, newMoons=None, observer='geocentric'):
     if not newMoons:
         newMoons = getNewMoonAroundMatariki(year, observer=observer)
     t = newMoons[0].shift(days=22)
@@ -20,9 +20,12 @@ def getMatarikiTangaroa(year, newMoons = None, observer='geocentric'):
         t = t.shift(days=1)
     return t.floor('day')
 
-def getMatarikiFriday(year, observer='geocentric'):
-    t = getMatarikiTangaroa(year, observer=observer)
-    m = t.shift(days = 4 - t.weekday())
+def getMatarikiFriday(year, newMoons=None, tangaroa=None, observer='geocentric'):
+    if not newMoons:
+        newMoons = getNewMoonAroundMatariki(year, observer=observer)
+    if not tangaroa:
+        tangaroa = getMatarikiTangaroa(year, observer=observer)
+    m = tangaroa.shift(days = 4 - tangaroa.weekday())
     if m.datetime.day < 19 and m.datetime.month <= 6:
         m = m.shift(days=7)
     return m
