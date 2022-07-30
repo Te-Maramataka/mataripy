@@ -24,7 +24,7 @@ def getMatarikiFriday(year, newMoons=None, tangaroa=None, observer='geocentric')
     if not newMoons:
         newMoons = getNewMoonAroundMatariki(year, observer=observer)
     if not tangaroa:
-        tangaroa = getMatarikiTangaroa(year, observer=observer)
+        tangaroa = getMatarikiTangaroa(year, newMoons=newMoons, observer=observer)
     m = tangaroa.shift(days = 4 - tangaroa.weekday())
     if m.datetime.day < 19 and m.datetime.month <= 6:
         m = m.shift(days=7)
