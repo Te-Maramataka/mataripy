@@ -4,7 +4,7 @@ from functools import reduce
 
 TEAMS = ['EV', 'Jalja', 'nsb', 'RPAI', 'cz']
 TEAM_PREDITION_DECADE = '/everydecade.txt'
-TARGET_PRDITION_DECADE = 'sample_decades.txt'
+TARGET_PRDITION_DECADE = 'judging/sample_decades.txt'
 
 TEAM_FORMATS = {'EV': 'Do MMMM YYYY',
                 'Jalja': 'M/D/YYYY',
@@ -34,7 +34,7 @@ def getAccuracy():
     accuracy = {}
     for team in TEAMS:
         targets = getDatesFromFile(TARGET_PRDITION_DECADE)
-        predictions = getDatesFromFile(team + TEAM_PREDITION_DECADE, TEAM_FORMATS[team])
+        predictions = getDatesFromFile('judging/' + team + TEAM_PREDITION_DECADE, TEAM_FORMATS[team])
         targets = np.asarray(targets)
         predictions = np.asarray(predictions)
         accuracy[team] = calcAccuracy(predictions, targets), calcAccuracy(getYearList(predictions), getYearList(targets))
