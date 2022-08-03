@@ -2,14 +2,14 @@ import arrow
 import numpy as np
 from functools import reduce
 
-TEAMS = ['EV', 'Jalja', 'nsb', 'RPAI', 'cz']
+TEAMS = ['EV', 'Jalja', 'nsb', 'PRAI', 'cz']
 TEAM_PREDITION_DECADE = '/everydecade.txt'
 TARGET_PRDITION_DECADE = 'judging/sample_decades.txt'
 
 TEAM_FORMATS = {'EV': 'Do MMMM YYYY',
                 'Jalja': 'M/D/YYYY',
                 'nsb': 'YYYY-MM-DD',
-                'RPAI': 'YYYY Do MMMM',
+                'PRAI': 'YYYY Do MMMM',
                 'cz': 'MMMM DD, YYYY'}
 
 def getDatesFromFile(filename, format='YYYY-MM-DD'):
